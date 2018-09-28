@@ -5,11 +5,11 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
 
-    public int scoreValue;  // これが敵を倒すと得られる点数になる
+    public int score;  // これが敵を倒すと得られる点数になる
     private ScoreManager sm;
 
 
-    public int RemainingTime;
+
     // Use this for initialization
     void Start()
     {
@@ -35,7 +35,7 @@ public class Bullet : MonoBehaviour
         {
            
             this.transform.localScale = Vector3.zero; //みえない大きさにする
-            sm.AddScore(scoreValue);
+            //sm.AddScore(score);
         }
     }
 }

@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class Target1 : MonoBehaviour
 {
+
+    public int score;  // これが敵を倒すと得られる点数になる
+    private ScoreManager sm;
+
     //public float speed;
     //public float speed1;
     public float Random1;
@@ -13,7 +17,8 @@ public class Target1 : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-
+        // 「ScoreManagerオブジェクト」に付いている「ScoreManagerスクリプト」の情報を取得して「sm」の箱に入れる。
+        sm = GameObject.Find("ScoreManager").GetComponent<ScoreManager>();
     }
 
     // Update is called once per frame
@@ -22,4 +27,17 @@ public class Target1 : MonoBehaviour
         //transform.position += new Vector3(speed ,speed1, 0f);
         this.gameObject.transform.Translate(Random.Range(Random1,Random2), Random.Range(Random3,Random4), 0);
     }
+
+    void OnCollisionEnter(Collision collision) //衝突時の処理
+    {
+        //Destroy(this.gameObject);
+        if (collision.gameObject.tag == "Bullet")
+        //タグで限定（他のオブジェクトに衝突した場合は呼び出さない
+        {
+
+            this.transform.localScale = Vector3.zero; //みえない大きさにする
+            sm.AddScore(score);
+        }
+    }
+
 }
