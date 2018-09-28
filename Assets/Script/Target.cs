@@ -31,6 +31,12 @@ public class Target : MonoBehaviour {
             this.transform.localScale = Vector3.zero; //みえない大きさにする
             sm.AddScore(score);
         }
+
+        if (collision.gameObject.CompareTag("Bullet"))
+        {
+            //Debug.Log("Bullet Tag");
+            Destroy(collision.gameObject);
+        }
     }
 
 }
