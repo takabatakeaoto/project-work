@@ -4,21 +4,25 @@ using UnityEngine;
 
 public class Target : MonoBehaviour {
     public float speed;
-
+    public int RemainingTime;
+    // public float Random1;
+    // public float Random2;
     public int score;  // これが敵を倒すと得られる点数になる
     private ScoreManager sm;
 
 
     // Use this for initialization
     void Start () {
+        StartCoroutine("TimeBomb");
         // 「ScoreManagerオブジェクト」に付いている「ScoreManagerスクリプト」の情報を取得して「sm」の箱に入れる。
         sm = GameObject.Find("ScoreManager").GetComponent<ScoreManager>();
     }
 	
 	// Update is called once per frame
 	void Update () {
-         transform.position += new Vector3(speed, 0f, 0f);
-        //this.gameObject.transform.Translate(Random.Range(0.05f, 0.1f), Random.Range(-0.1f, 0.1f), 0);
+        transform.position += new Vector3(speed, 0f, 0f);
+        //this.gameObject.transform.Translate(Random.Range(Random1, Random2), 0,0);
+        
     }
 
     void OnCollisionEnter(Collision collision) //衝突時の処理
@@ -38,5 +42,11 @@ public class Target : MonoBehaviour {
             Destroy(collision.gameObject);
         }
     }
+    IEnumerator TimeBomb()
+    {
+        yield return new WaitForSeconds(RemainingTime);
+        Destroy(this.gameObject);
+        yield return null;
 
+    }
 }

@@ -14,9 +14,11 @@ public class Target1 : MonoBehaviour
     public float Random2;
     public float Random3;
     public float Random4;
+    public int RemainingTime;
     // Use this for initialization
     void Start()
     {
+        StartCoroutine("TimeBomb");
         // 「ScoreManagerオブジェクト」に付いている「ScoreManagerスクリプト」の情報を取得して「sm」の箱に入れる。
         sm = GameObject.Find("ScoreManager").GetComponent<ScoreManager>();
     }
@@ -45,5 +47,11 @@ public class Target1 : MonoBehaviour
             Destroy(collision.gameObject);
         }
     }
+    IEnumerator TimeBomb()
+    {
+        yield return new WaitForSeconds(RemainingTime);
+        Destroy(this.gameObject);
+        yield return null;
 
+    }
 }

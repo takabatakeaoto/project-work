@@ -20,7 +20,7 @@ public class Destroy : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Bullet"))
         {
-            //Debug.Log("Bullet Tag");
+            
             Destroy(collision.gameObject);
         }
     }

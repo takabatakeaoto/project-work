@@ -1,10 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
-
+using System.Collections.Generic;
 //指定したゲームオブジェクトを無限スポーンさせるスクリプト
 public class spawner : MonoBehaviour
 {
-
+    
     //発生するオブジェクトをInspectorから指定する用
     public GameObject spawnObject;
     //発生間隔用
@@ -13,9 +13,15 @@ public class spawner : MonoBehaviour
 
     void Start()
     {
+
+  
+
         //コルーチンの開始
         StartCoroutine("Spawn");
     }
+
+
+   
 
     IEnumerator Spawn()
     {
