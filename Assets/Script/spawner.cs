@@ -8,7 +8,7 @@ public class spawner : MonoBehaviour
     //発生するオブジェクトをInspectorから指定する用
     public GameObject spawnObject;
     //発生間隔用
-    public float interval = 3.0f;
+    public float interval;
 
 
     void Start()
@@ -29,7 +29,8 @@ public class spawner : MonoBehaviour
         while (true)
         {
             //自分をつけたオブジェクトの位置に、発生するオブジェクトをインスタンス化して生成する
-            Instantiate(spawnObject, transform.position, Quaternion.identity);
+            GameObject obj = Instantiate(spawnObject, transform.position, Quaternion.identity);
+            obj.transform.Rotate(new Vector3(0, 90, 0));
             yield return new WaitForSeconds(interval);
         }
     }

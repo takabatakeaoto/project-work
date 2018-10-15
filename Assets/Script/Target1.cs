@@ -27,7 +27,7 @@ public class Target1 : MonoBehaviour
     void Update()
     {
         //transform.position += new Vector3(speed ,speed1, 0f);
-        this.gameObject.transform.Translate(Random.Range(Random1,Random2), Random.Range(Random3,Random4), 0);
+        this.gameObject.transform.Translate(0, Random.Range(Random3,Random4), Random.Range(Random1, Random2));
     }
 
     void OnCollisionEnter(Collision collision) //衝突時の処理
