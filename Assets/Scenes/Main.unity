@@ -296,7 +296,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnObject: {fileID: 1555548842}
-  interval: 4.3
+  interval: 4.4
 --- !u!4 &162413875
 Transform:
   m_ObjectHideFlags: 0
