@@ -25,10 +25,9 @@ GameObject:
   - component: {fileID: 114928874019739302}
   - component: {fileID: 54278296713115856}
   - component: {fileID: 136338948746454272}
-  - component: {fileID: 114240651433078288}
   m_Layer: 0
   m_Name: SheepWhite
-  m_TagString: Target
+  m_TagString: Animal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -121,18 +120,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &114240651433078288
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1965851562501010}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4dda4c891c66668448451c66a4d439dd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isFadeOut: 0
 --- !u!114 &114928874019739302
 MonoBehaviour:
   m_ObjectHideFlags: 1

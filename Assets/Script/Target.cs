@@ -34,6 +34,10 @@ public class Target : MonoBehaviour {
 
             this.transform.localScale = Vector3.zero; //みえない大きさにする
             sm.AddScore(score);
+            if (gameObject.tag == "Animal")
+            {
+                GameObject.Find("Panel (1)").GetComponent<ImageScript>().isFadeOut=true;
+            }
         }
 
         if (collision.gameObject.CompareTag("Bullet"))

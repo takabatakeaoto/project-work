@@ -24,7 +24,10 @@ public class ImageScript : MonoBehaviour {
         green = fadeImage.color.g;
         blue = fadeImage.color.b;
        alfa = fadeImage.color.a;
-	}
+
+ 
+
+    }
 
     // Update is called once per frame
     void Update()
@@ -36,7 +39,7 @@ public class ImageScript : MonoBehaviour {
 
         if (alfa >= 1)
         {
-            isFadeIn = true;
+           isFadeIn = true;
         }
         if (isFadeIn)
         {
@@ -45,28 +48,30 @@ public class ImageScript : MonoBehaviour {
             StartFadeIn();
         }
 
-        if (gameObject.CompareTag("Animal"))
-        {
+       // if (CompareTag("Animal"))
+       // {
         
-            Destroy(gameObject);
+       //     isFadeOut = true;
             
-        }
+       // }
 
-     isFadeOut = true;
+     
 
-        if (isFadeOut)
+       if (isFadeOut)
         {
             StartFadeOut();
         }
     }
-    
+
+
+
     
 
-    void  StartFadeOut()
+            void  StartFadeOut()
     {
         fadeImage.enabled = true;
         alfa += fadeSpeed;
-        if(alfa >- 1)
+        if(alfa >= 1)
         {
             fadeImage.enabled = false;
         }

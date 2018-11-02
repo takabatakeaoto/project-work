@@ -26,7 +26,7 @@ public class FadeController : MonoBehaviour
     void Update()
     {
 
-        //if (isFadeIn)
+       
         if (alfa >= 1)
         {
             isFadeIn = true;
