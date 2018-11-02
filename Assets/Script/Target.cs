@@ -8,7 +8,7 @@ public class Target : MonoBehaviour {
     // public float Random1;
     // public float Random2;
     public int score;  // これが敵を倒すと得られる点数になる
-    private ScoreManager sm;
+    public ScoreManager sm;
 
 
     // Use this for initialization

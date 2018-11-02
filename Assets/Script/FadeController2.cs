@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI; //パネルのイメージを操作するのに必要
-
-public class FadeController : MonoBehaviour
+using UnityEngine.SceneManagement;
+public class FadeController2 : MonoBehaviour
 {
 
     float fadeSpeed = 0.02f;        //透明度が変わるスピードを管理
@@ -11,9 +11,11 @@ public class FadeController : MonoBehaviour
 
     public bool isFadeOut = false;  //フェードアウト処理の開始、完了を管理するフラグ
     public bool isFadeIn = false;   //フェードイン処理の開始、完了を管理するフラグ
+  
+
 
     Image fadeImage;                //透明度を変更するパネルのイメージ
-
+    
     void Start()
     {
         fadeImage = GetComponent<Image>();
@@ -21,20 +23,35 @@ public class FadeController : MonoBehaviour
         green = fadeImage.color.g;
         blue = fadeImage.color.b;
         alfa = fadeImage.color.a;
+
+        
+
+
+
     }
 
     void Update()
     {
+       
+        //if (isFadeIn)
+        if (alfa >= 1)
+        {
+            isFadeIn = true;
+        }
         if (isFadeIn)
         {
+
+
             StartFadeIn();
         }
 
-        if (Input.GetButtonDown("Fire1"))
+
+        if (Input.GetButtonDown("Fire2"))
+       
         {
-            isFadeOut = true;
-            
-        }
+           isFadeOut = true;
+
+      }
         if (isFadeOut)
         {
             StartFadeOut();
@@ -59,7 +76,9 @@ public class FadeController : MonoBehaviour
         SetAlpha();               // c)変更した透明度をパネルに反映する
         if (alfa >= 1)
         {             // d)完全に不透明になったら処理を抜ける
-            isFadeOut  =false;
+
+           SceneManager.LoadScene("gameover");
+
         }
     }
 
