@@ -48,12 +48,7 @@ public class ImageScript : MonoBehaviour {
             StartFadeIn();
         }
 
-       // if (CompareTag("Animal"))
-       // {
-        
-       //     isFadeOut = true;
-            
-       // }
+       
 
      
 
@@ -65,14 +60,16 @@ public class ImageScript : MonoBehaviour {
 
 
 
-    
 
-            void  StartFadeOut()
+
+    void StartFadeOut()
     {
-        fadeImage.enabled = true;
-        alfa += fadeSpeed;
-        if(alfa >= 1)
-        {
+        fadeImage.enabled = true;  // a)パネルの表示をオンにする
+        alfa += fadeSpeed;         // b)不透明度を徐々にあげる
+        SetAlpha();               // c)変更した透明度をパネルに反映する
+        if (alfa >= 1)
+        {             // d)完全に不透明になったら処理を抜ける
+
             fadeImage.enabled = false;
         }
     }
@@ -87,7 +84,6 @@ public class ImageScript : MonoBehaviour {
             fadeImage.enabled = false;    //d)パネルの表示をオフにする
         }
     }
-
     void SetAlpha()
     {
         fadeImage.color = new Color(red, green, blue, alfa);

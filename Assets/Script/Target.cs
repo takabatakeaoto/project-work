@@ -36,7 +36,7 @@ public class Target : MonoBehaviour {
             sm.AddScore(score);
             if (gameObject.tag == "Animal")
             {
-                GameObject.Find("Panel (1)").GetComponent<ImageScript>().isFadeOut=true;
+                GameObject.Find("red").GetComponent<ImageScript>().isFadeOut=true;
             }
         }
 
