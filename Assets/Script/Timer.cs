@@ -58,14 +58,14 @@ public class Timer : MonoBehaviour
         }
         oldSeconds = seconds;
         //　制限時間以下になったらコンソールに『制限時間終了』という文字列を表示する
-       // if (totalTime <= 0f)
-        //{
+         if (totalTime <= 0f)
+        {
+        GameObject.Find("Panel").GetComponent<FadeController2>().isFadeOut = true;
 
 
 
-
-            //SceneManager.LoadScene("gameover");
-        //}
+       // SceneManager.LoadScene("gameover");
+        }
     }
 
   

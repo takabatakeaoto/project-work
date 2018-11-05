@@ -10,7 +10,7 @@ using UnityEngine.SceneManagement;
 
 public class ImageScript : MonoBehaviour {
 
-    float fadeSpeed = 0.02f;
+    float fadeSpeed = 0.04f;
     float red, green, blue, alfa;
     public bool isFadeOut = false;
     public bool isFadeIn = false;
@@ -39,7 +39,7 @@ public class ImageScript : MonoBehaviour {
 
         if (alfa >= 1)
         {
-           isFadeIn = true;
+            isFadeIn = true;
         }
         if (isFadeIn)
         {
@@ -48,11 +48,11 @@ public class ImageScript : MonoBehaviour {
             StartFadeIn();
         }
 
-       
 
-     
 
-       if (isFadeOut)
+
+
+        if (isFadeOut)
         {
             StartFadeOut();
         }
@@ -69,8 +69,8 @@ public class ImageScript : MonoBehaviour {
         SetAlpha();               // c)変更した透明度をパネルに反映する
         if (alfa >= 1)
         {             // d)完全に不透明になったら処理を抜ける
-
-            fadeImage.enabled = false;
+            isFadeOut = false;
+                //fadeImage.enabled = false;
         }
     }
 
@@ -81,7 +81,7 @@ public class ImageScript : MonoBehaviour {
         if (alfa <= 0)
         {                    //c)完全に透明になったら処理を抜ける
             isFadeIn = false;
-            fadeImage.enabled = false;    //d)パネルの表示をオフにする
+           // fadeImage.enabled = false;    //d)パネルの表示をオフにする
         }
     }
     void SetAlpha()

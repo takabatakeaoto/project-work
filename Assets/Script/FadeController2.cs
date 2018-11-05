@@ -32,7 +32,7 @@ public class FadeController2 : MonoBehaviour
 
     void Update()
     {
-       
+        
         //if (isFadeIn)
         if (alfa >= 1)
         {
@@ -46,12 +46,12 @@ public class FadeController2 : MonoBehaviour
         }
 
 
-        if (Input.GetButtonDown("Fire2"))
+        //if (Input.GetButtonDown("Fire2"))
        
-        {
-           isFadeOut = true;
+       // {
+        //   isFadeOut = true;
 
-      }
+     // }
         if (isFadeOut)
         {
             StartFadeOut();

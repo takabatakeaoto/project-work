@@ -57,9 +57,10 @@ GameObject:
   - component: {fileID: 114168078009790838}
   - component: {fileID: 111459596789910246}
   - component: {fileID: 82249454023092302}
+  - component: {fileID: 114971932316713806}
   m_Layer: 0
   m_Name: Explosion
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -599,3 +600,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Radius: 2
   Force: 50
+--- !u!114 &114971932316713806
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1487602367960476}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 373db89c77bfe4e4cb8759a20fbdde73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

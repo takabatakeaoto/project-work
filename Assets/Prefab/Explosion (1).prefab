@@ -77,9 +77,12 @@ GameObject:
   - component: {fileID: 114127822911632748}
   - component: {fileID: 111139147849078698}
   - component: {fileID: 82182812299630048}
+  - component: {fileID: 114577146911901420}
+  - component: {fileID: 54993905838383126}
+  - component: {fileID: 135725293897432862}
   m_Layer: 0
   m_Name: Explosion (1)
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -146,7 +149,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1565677688314152}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -11.09, y: -8.91, z: -9.61}
+  m_LocalPosition: {x: 0.072801694, y: -8.9257346e-18, z: -0.564024}
   m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_Children:
   - {fileID: 4023522113118184}
@@ -415,6 +418,21 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1565677688314152}
   m_Mesh: {fileID: 4300000, guid: 8bb994523a673cb4ca6a4e4d65af961f, type: 3}
+--- !u!54 &54993905838383126
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1565677688314152}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!82 &82182812299630048
 AudioSource:
   m_ObjectHideFlags: 1
@@ -586,6 +604,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Light: {fileID: 108892904617441018}
+--- !u!114 &114577146911901420
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1565677688314152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 373db89c77bfe4e4cb8759a20fbdde73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114820246438664566
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -599,3 +628,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Radius: 2
   Force: 50
+--- !u!135 &135725293897432862
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1565677688314152}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.00001
+  m_Center: {x: 0, y: 0, z: 0}
