@@ -10,7 +10,7 @@ using UnityEngine.SceneManagement;
 
 public class ImageScript : MonoBehaviour {
 
-    float fadeSpeed = 0.04f;
+    float fadeSpeed = 0.1f;
     float red, green, blue, alfa;
     public bool isFadeOut = false;
     public bool isFadeIn = false;
@@ -86,7 +86,7 @@ public class ImageScript : MonoBehaviour {
     }
     void SetAlpha()
     {
-        fadeImage.color = new Color(red, green, blue, alfa);
+        fadeImage.color = new Color(red, green, blue, alfa * 0.75f);
     }
 
 }

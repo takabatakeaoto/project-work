@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class explosion : MonoBehaviour {
     Rigidbody rb;
+  
     public GameObject explode;//explodeにはunity上でprefabを関連付けます
     void Start()
     {
@@ -24,6 +25,12 @@ public class explosion : MonoBehaviour {
             this.transform.localScale = Vector3.zero; //みえない大きさにする
             Instantiate(explode, this.transform.position, Quaternion.identity);
             //ぶつかった位置にexplodeというprefabを配置する
+
+
+
         }
     }
+
+    
+
 }

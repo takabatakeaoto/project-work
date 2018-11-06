@@ -13,13 +13,13 @@ public class fireworks : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        if(ScoreManager.score < 30)
+        if(ScoreManager.score < 80)
         {
             Fire.SetActive(false);
         }
 
 
-        if (ScoreManager.score > 30)
+        if (ScoreManager.score > 80)
         {
             Fire.SetActive(true);
         }

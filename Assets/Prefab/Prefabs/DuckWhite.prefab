@@ -25,6 +25,7 @@ GameObject:
   - component: {fileID: 54180690593386036}
   - component: {fileID: 136350813787457320}
   - component: {fileID: 114962196640168412}
+  - component: {fileID: 114576803316472280}
   m_Layer: 0
   m_Name: DuckWhite
   m_TagString: Animal
@@ -120,6 +121,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114576803316472280
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1522729216997060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67e7cdb71e95f934d8136375e9905e6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sound: {fileID: 8300000, guid: 0bf1ee6a044d2a04db50be9f4f831b64, type: 3}
 --- !u!114 &114962196640168412
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -132,7 +145,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.1
-  RemainingTime: 10
+  RemainingTime: 5
   score: -2
   sm: {fileID: 0}
 --- !u!136 &136350813787457320

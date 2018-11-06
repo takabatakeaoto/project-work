@@ -623,6 +623,7 @@ MonoBehaviour:
   speed: 0
   RemainingTime: 0
   score: -3
+  sm: {fileID: 0}
 --- !u!54 &702856412
 Rigidbody:
   m_ObjectHideFlags: 0

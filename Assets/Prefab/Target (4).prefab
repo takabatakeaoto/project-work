@@ -114,7 +114,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.125
-  RemainingTime: 10
+  RemainingTime: 5
   score: 2
   sm: {fileID: 0}
 --- !u!114 &114287475815694376

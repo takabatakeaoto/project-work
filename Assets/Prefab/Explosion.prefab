@@ -58,6 +58,8 @@ GameObject:
   - component: {fileID: 111459596789910246}
   - component: {fileID: 82249454023092302}
   - component: {fileID: 114971932316713806}
+  - component: {fileID: 135265825265224184}
+  - component: {fileID: 54257283624344962}
   m_Layer: 0
   m_Name: Explosion
   m_TagString: Bullet
@@ -416,6 +418,21 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1487602367960476}
   m_Mesh: {fileID: 4300000, guid: 8bb994523a673cb4ca6a4e4d65af961f, type: 3}
+--- !u!54 &54257283624344962
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1487602367960476}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!82 &82249454023092302
 AudioSource:
   m_ObjectHideFlags: 1
@@ -611,3 +628,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 373db89c77bfe4e4cb8759a20fbdde73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!135 &135265825265224184
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1487602367960476}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1.5
+  m_Center: {x: 0, y: 0, z: 0}

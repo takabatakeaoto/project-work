@@ -113,7 +113,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24f3d7fd8651b9144a311a392a07462c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explode: {fileID: 1000010608846784, guid: 6747b1742d70743a8aff8594e708b2f7, type: 2}
+  explode: {fileID: 1635355999543268, guid: 85b2d7c9b7fe7ba4b81e69707a2c1a14, type: 2}
 --- !u!114 &114548244809172686
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -126,8 +126,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.1
-  RemainingTime: 10
+  RemainingTime: 5
   score: 1
+  sm: {fileID: 0}
 --- !u!136 &136814525117171446
 CapsuleCollider:
   m_ObjectHideFlags: 1

@@ -5,8 +5,15 @@ using System.Collections;
 public class GraphicExplosion : MonoBehaviour {
 public float loopduration;
 private float ramptime=0;
-private float alphatime=1;	
-	void Update () {
+private float alphatime=1;
+
+     void Start()
+    {
+        StartCoroutine("TimeBomb");
+    }
+
+
+    void Update () {
 		Destroy(gameObject, 7);
 ramptime+=Time.deltaTime*2;
 alphatime-=Time.deltaTime;		
@@ -23,4 +30,13 @@ GetComponent<Renderer>().material.SetFloat("_ClipRange", alphatime);
 
 
 	}
+
+    IEnumerator TimeBomb()
+    {
+        yield return new WaitForSeconds(0.5f);
+        Destroy(this.gameObject);
+        yield return null;
+
+    }
+
 }
