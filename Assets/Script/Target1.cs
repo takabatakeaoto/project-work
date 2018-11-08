@@ -6,7 +6,7 @@ public class Target1 : MonoBehaviour
 {
 
     public int score;  // これが敵を倒すと得られる点数になる
-    private ScoreManager sm;
+    public ScoreManager sm;
 
     //public float speed;
     //public float speed1;

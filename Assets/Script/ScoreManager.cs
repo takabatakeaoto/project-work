@@ -13,8 +13,14 @@ public class ScoreManager : MonoBehaviour
     {
 
         scoreLabel = GameObject.Find("ScoreLabel").GetComponent<Text>();
-        scoreLabel.text = "SCORE：" + score;
+        scoreLabel.text = "SCORE " + score;
     }
+
+
+
+    
+           
+    
 
     // スコアを増加させるメソッド
     // 外部からアクセスするためpublicで定義する
@@ -22,7 +28,7 @@ public class ScoreManager : MonoBehaviour
     {
 
         score += amount;
-        scoreLabel.text = "SCORE：" + score;
+        scoreLabel.text = "SCORE " + score;
     }
     
 }

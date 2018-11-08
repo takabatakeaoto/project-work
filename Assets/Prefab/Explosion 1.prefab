@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4739997690942928}
   - component: {fileID: 114922537613008144}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Physical explosion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37,7 +37,7 @@ GameObject:
   - component: {fileID: 4005771049256744}
   - component: {fileID: 108051088295067866}
   - component: {fileID: 114707052634407568}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55,7 +55,7 @@ GameObject:
   - component: {fileID: 15051776662697466}
   - component: {fileID: 12283084990051074}
   - component: {fileID: 26927631916744302}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -78,7 +78,7 @@ GameObject:
   - component: {fileID: 114780034059012432}
   - component: {fileID: 135089797905609382}
   - component: {fileID: 54601229251142826}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Explosion 1
   m_TagString: Bullet
   m_Icon: {fileID: 0}
@@ -96,7 +96,7 @@ GameObject:
   - component: {fileID: 15778603179757344}
   - component: {fileID: 12929952225368622}
   - component: {fileID: 26188313711671076}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Sparks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
