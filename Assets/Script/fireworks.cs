@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class fireworks : MonoBehaviour {
     public GameObject Fire;
-    public AudioClip sound;
+   
 	// Use this for initialization
 	void Start () {
 		
@@ -14,17 +14,20 @@ public class fireworks : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        if(ScoreManager.score < 80)
+        if(ScoreManager.score < 50)
         {
             Fire.SetActive(false);
+
+            Fire.GetComponent<AudioSource>().Play();
         }
 
 
-        if (ScoreManager.score >= 80)
+        if (ScoreManager.score >= 50)
         {
-        AudioSource.PlayClipAtPoint(sound, transform.position);
+            Fire.SetActive(true);
+ 
 
-         Fire.SetActive(true);
+        
         }
 	}
 }

@@ -4897,7 +4897,7 @@ GameObject:
   - component: {fileID: 1178600729}
   - component: {fileID: 1178600730}
   - component: {fileID: 1178600732}
-  - component: {fileID: 1178600734}
+  - component: {fileID: 1178600733}
   m_Layer: 0
   m_Name: Fire
   m_TagString: Untagged
@@ -9580,8 +9580,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Fire: {fileID: 1178600728}
-  sound: {fileID: 8300000, guid: d9a5d889670d94144bb1e3c824f08ca5, type: 3}
---- !u!82 &1178600734
+--- !u!82 &1178600733
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9590,8 +9589,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 9bc18dc6f23ec724aa11fe1b9ab6b7c3, type: 3}
-  m_PlayOnAwake: 1
+  m_audioClip: {fileID: 8300000, guid: 818b79b9c5dedf246b24926546834d1b, type: 3}
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0

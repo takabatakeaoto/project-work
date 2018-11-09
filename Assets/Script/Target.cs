@@ -27,13 +27,14 @@ public class Target : MonoBehaviour {
 
     void OnCollisionEnter(Collision collision) //衝突時の処理
     {
+        //Debug.Log(score);
         //Destroy(this.gameObject);
         if (collision.gameObject.tag == "Bullet")
         //タグで限定（他のオブジェクトに衝突した場合は呼び出さない
         {
-
             this.transform.localScale = Vector3.zero; //みえない大きさにする
             sm.AddScore(score);
+        
             if (gameObject.tag == "Animal")
             {
                 GameObject.Find("red").GetComponent<ImageScript>().isFadeOut=true;

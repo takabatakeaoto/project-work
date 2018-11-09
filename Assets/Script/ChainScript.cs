@@ -18,7 +18,7 @@ public class ChainScript : MonoBehaviour {
     {
         if (collision.gameObject.tag == "Target")
         {
-            this.transform.localScale = Vector3.zero; //みえない大きさにする
+            //this.transform.localScale = Vector3.zero; //みえない大きさにする
         
             Destroy(collision.gameObject);
         }    

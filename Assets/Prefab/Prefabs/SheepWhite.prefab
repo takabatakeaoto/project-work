@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 114700817769008422}
   - component: {fileID: 114928874019739302}
   - component: {fileID: 54278296713115856}
-  - component: {fileID: 136338948746454272}
+  - component: {fileID: 64576990196774834}
   m_Layer: 0
   m_Name: SheepWhite
   m_TagString: Animal
@@ -103,6 +103,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!64 &64576990196774834
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1965851562501010}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300000, guid: 5d8504897ce36db4ea5e50f018657780, type: 3}
 --- !u!95 &95907328181767374
 Animator:
   serializedVersion: 3
@@ -148,16 +162,3 @@ MonoBehaviour:
   RemainingTime: 5
   score: -2
   sm: {fileID: 0}
---- !u!136 &136338948746454272
-CapsuleCollider:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1965851562501010}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.6344905
-  m_Height: 0.8927839
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0.4438215, z: 0.119502544}

@@ -21,10 +21,10 @@ GameObject:
   - component: {fileID: 4680752844379684}
   - component: {fileID: 33132334545632116}
   - component: {fileID: 23064163141605768}
-  - component: {fileID: 136814525117171446}
   - component: {fileID: 54033134304859260}
   - component: {fileID: 114548244809172686}
   - component: {fileID: 114040306203948796}
+  - component: {fileID: 64124679322883770}
   m_Layer: 10
   m_Name: Target (2)
   m_TagString: Target
@@ -39,7 +39,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1963343452678594}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.9397135, y: 0.8, z: -4.618256}
+  m_LocalPosition: {x: 7.9880714, y: -10, z: 0.5941658}
   m_LocalScale: {x: 0.1, y: 0.75, z: 0.75}
   m_Children: []
   m_Father: {fileID: 0}
@@ -102,6 +102,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 8
   m_CollisionDetection: 0
+--- !u!64 &64124679322883770
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1963343452678594}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!114 &114040306203948796
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -129,16 +143,3 @@ MonoBehaviour:
   RemainingTime: 5
   score: 1
   sm: {fileID: 0}
---- !u!136 &136814525117171446
-CapsuleCollider:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1963343452678594}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}

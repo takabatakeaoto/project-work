@@ -23,9 +23,9 @@ GameObject:
   - component: {fileID: 23918865209778262}
   - component: {fileID: 95612955934908496}
   - component: {fileID: 114507218969166184}
-  - component: {fileID: 136542326117579718}
   - component: {fileID: 54083863295787582}
   - component: {fileID: 114205036523933656}
+  - component: {fileID: 64989360870823138}
   m_Layer: 0
   m_Name: ChickenBrown
   m_TagString: Animal
@@ -103,6 +103,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!64 &64989360870823138
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1206511787925574}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300000, guid: 7bad4e7c89be10a4083226108ffcab9d, type: 3}
 --- !u!95 &95612955934908496
 Animator:
   serializedVersion: 3
@@ -148,16 +162,3 @@ MonoBehaviour:
   RemainingTime: 5
   score: -2
   sm: {fileID: 0}
---- !u!136 &136542326117579718
-CapsuleCollider:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1206511787925574}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.30502445
-  m_Height: 0.71676344
-  m_Direction: 1
-  m_Center: {x: 0.000000007450581, y: 0.36196527, z: 0.00050891936}

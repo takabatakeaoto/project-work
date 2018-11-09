@@ -23,9 +23,9 @@ GameObject:
   - component: {fileID: 23139075055340906}
   - component: {fileID: 95010028461246732}
   - component: {fileID: 54180690593386036}
-  - component: {fileID: 136350813787457320}
   - component: {fileID: 114962196640168412}
   - component: {fileID: 114576803316472280}
+  - component: {fileID: 64413231583780354}
   m_Layer: 0
   m_Name: DuckWhite
   m_TagString: Animal
@@ -103,6 +103,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!64 &64413231583780354
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1522729216997060}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300000, guid: 82d0b33fd2ad44744aa557711150e99e, type: 3}
 --- !u!95 &95010028461246732
 Animator:
   serializedVersion: 3
@@ -148,16 +162,3 @@ MonoBehaviour:
   RemainingTime: 5
   score: -2
   sm: {fileID: 0}
---- !u!136 &136350813787457320
-CapsuleCollider:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1522729216997060}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.3270391
-  m_Height: 0.60054964
-  m_Direction: 1
-  m_Center: {x: 0.00000002980233, y: 0.29665187, z: -0.03625711}
