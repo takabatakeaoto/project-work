@@ -35,10 +35,11 @@ GetComponent<Renderer>().material.SetFloat("_ClipRange", alphatime);
     {
         
         yield return new WaitForSeconds(0.5f);
-      
 
+       
 
-        Destroy(this.gameObject);
+            Destroy(this.gameObject);
+        
         
         yield return null;
 

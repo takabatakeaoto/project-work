@@ -15,7 +15,7 @@ public class Fireworks : MonoBehaviour {
    
     void Start () {
 
-        AudioSource[] audioSources = GetComponents<AudioSource>();
+       // AudioSource[] audioSources = GetComponents<AudioSource>();
         // sound01 = audioSources[0];
         //  sound02 = audioSources[1];
 
