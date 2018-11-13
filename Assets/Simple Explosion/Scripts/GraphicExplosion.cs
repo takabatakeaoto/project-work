@@ -33,9 +33,13 @@ GetComponent<Renderer>().material.SetFloat("_ClipRange", alphatime);
 
     IEnumerator TimeBomb()
     {
-        yield return new WaitForSeconds(0.5f);
         
+        yield return new WaitForSeconds(0.5f);
+      
+
+
         Destroy(this.gameObject);
+        
         yield return null;
 
     }

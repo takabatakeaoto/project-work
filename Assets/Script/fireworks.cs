@@ -3,31 +3,47 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class fireworks : MonoBehaviour {
+public class Fireworks : MonoBehaviour {
     public GameObject Fire;
-   
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
 
-        if(ScoreManager.score < 50)
-        {
-            Fire.SetActive(false);
+     public AudioSource sound01;
+    public AudioSource sound02;
 
-            Fire.GetComponent<AudioSource>().Play();
-        }
-
-
-        if (ScoreManager.score >= 50)
-        {
-            Fire.SetActive(true);
  
 
+
+   
+    void Start () {
+
+        AudioSource[] audioSources = GetComponents<AudioSource>();
+        // sound01 = audioSources[0];
+        //  sound02 = audioSources[1];
+
+        if (ScoreManager.score <= 61)
+        {
+         
+            Fire.SetActive(false);
         
+          sound01.PlayOneShot(sound01.clip);
         }
+
+
+        if (ScoreManager.score >= 60)
+        {
+           
+            Fire.SetActive(true);
+             
+               sound02.PlayOneShot(sound02.clip);
+
+
+        }
+    }
+	
+	
+	void Update () {
+
+
+      
+        
 	}
 }
