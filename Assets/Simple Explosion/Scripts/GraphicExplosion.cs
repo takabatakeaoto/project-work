@@ -6,11 +6,15 @@ public class GraphicExplosion : MonoBehaviour {
 public float loopduration;
 private float ramptime=0;
 private float alphatime=1;
+   
 
-     void Start()
+    void Start()
     {
         StartCoroutine("TimeBomb");
-    }
+
+       
+    
+}
 
 
     void Update () {
@@ -31,6 +35,11 @@ GetComponent<Renderer>().material.SetFloat("_ClipRange", alphatime);
 
 	}
 
+
+    
+    
+
+
     IEnumerator TimeBomb()
     {
         
@@ -38,7 +47,7 @@ GetComponent<Renderer>().material.SetFloat("_ClipRange", alphatime);
 
        
 
-            Destroy(this.gameObject);
+           Destroy(this.gameObject);
         
         
         yield return null;

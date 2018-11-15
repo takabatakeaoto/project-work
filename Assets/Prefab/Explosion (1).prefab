@@ -82,7 +82,7 @@ GameObject:
   - component: {fileID: 135510295437055430}
   m_Layer: 9
   m_Name: Explosion (1)
-  m_TagString: Bullet
+  m_TagString: explosion
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -149,7 +149,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1565677688314152}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.072801694, y: -8.9257346e-18, z: -0.564024}
+  m_LocalPosition: {x: 5.0154, y: -10, z: -151.31721}
   m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_Children:
   - {fileID: 4023522113118184}
@@ -610,7 +610,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1565677688314152}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 373db89c77bfe4e4cb8759a20fbdde73, type: 3}
   m_Name: 

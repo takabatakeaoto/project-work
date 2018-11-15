@@ -36,16 +36,35 @@ public class Target1 : MonoBehaviour
         if (collision.gameObject.tag == "Bullet")
         //タグで限定（他のオブジェクトに衝突した場合は呼び出さない
         {
-
-            this.transform.localScale = Vector3.zero; //みえない大きさにする
+     
+           this.transform.localScale = Vector3.zero; //みえない大きさにする
             sm.AddScore(score);
-        }
-
-        if (collision.gameObject.CompareTag("Bullet"))
-        {
-            //Debug.Log("Bullet Tag");
             Destroy(collision.gameObject);
         }
+
+       // if (collision.gameObject.CompareTag("Bullet"))
+       // {
+            //Debug.Log("Bullet Tag");
+            
+
+       // }
+
+       if (collision.gameObject.CompareTag("explosion"))
+        {
+            this.transform.localScale = Vector3.zero;
+            
+            Destroy(collision.gameObject,0.5f);
+            sm.AddScore(score);
+
+
+            if (gameObject.tag == "Animal")
+            {
+                GameObject.Find("red").GetComponent<ImageScript>().isFadeOut = true;
+            }
+
+        }
+
+
     }
     IEnumerator TimeBomb()
     {

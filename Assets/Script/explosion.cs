@@ -29,8 +29,18 @@ public class explosion : MonoBehaviour {
 
 
         }
+
+        if (collision.gameObject.tag == "explosion")
+        //タグで限定（他のオブジェクトに衝突した場合は呼び出さない
+        {
+            rb.isKinematic = true; //位置を固定
+            //this.transform.localScale = Vector3.zero; //みえない大きさにする
+            Destroy(this.gameObject,0.5f);
+            Instantiate(explode, this.transform.position, Quaternion.identity);
+            //ぶつかった位置にexplodeというprefabを配置する
+
+        }
     }
 
-    
 
-}
+ }

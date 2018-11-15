@@ -34,6 +34,7 @@ public class Target : MonoBehaviour {
         {
             this.transform.localScale = Vector3.zero; //みえない大きさにする
             sm.AddScore(score);
+            Destroy(collision.gameObject);
         
             if (gameObject.tag == "Animal")
             {
@@ -41,11 +42,27 @@ public class Target : MonoBehaviour {
             }
         }
 
-        if (collision.gameObject.CompareTag("Bullet"))
-        {
+       // if (collision.gameObject.CompareTag("Bullet")) 
+       // {
             //Debug.Log("Bullet Tag");
-            Destroy(collision.gameObject);
+           
+       // }
+
+        if (collision.gameObject.CompareTag("explosion"))
+        {
+            this.transform.localScale = Vector3.zero;
+          
+            Destroy(collision.gameObject,0.5f);
+            sm.AddScore(score);
+
+
+
+            if (gameObject.tag == "Animal")
+            {
+                GameObject.Find("red").GetComponent<ImageScript>().isFadeOut = true;
+           }
         }
+
     }
     IEnumerator TimeBomb()
     {
