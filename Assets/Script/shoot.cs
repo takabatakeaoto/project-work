@@ -11,7 +11,7 @@ public class shoot : MonoBehaviour
     public GameObject Player;
     
     public float timeBetweenShot;
-    private float timer ;
+    public float timer ;
     // Use this for initialization
     void Start()
     {

@@ -9,24 +9,37 @@ public class LoadingScript : MonoBehaviour
     
 
     public Image UIobj;
-    public bool roop;
-    public float countTime = 5.0f;
+    
+    public float countTime ;
+
+    public shoot shoottime;
+    public float shotTimeSec;
+    public bool roop  = false;
 
 
      void Start()
     {
-        
+       shoottime =  GameObject.Find("Player").GetComponent<shoot>();
+       
     }
 
 
-    // Update is called once per frame
+    
     void Update()
     {
-        
+        shotTimeSec = shoottime.timer;
+
 
         if (roop)
         {
+            
             UIobj.fillAmount -= 1.0f / countTime * Time.deltaTime;
+        
         }
+       
     }
+
+
+    
+    
 }
