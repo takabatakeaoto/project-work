@@ -19,7 +19,7 @@ public class Fireworks : MonoBehaviour {
         // sound01 = audioSources[0];
         //  sound02 = audioSources[1];
 
-        if (ScoreManager.score <= 61)
+        if (ScoreManager.score <= 80)
         {
          
             Fire.SetActive(false);
@@ -28,7 +28,7 @@ public class Fireworks : MonoBehaviour {
         }
 
 
-        if (ScoreManager.score >= 60)
+        if (ScoreManager.score >= 79)
         {
            
             Fire.SetActive(true);

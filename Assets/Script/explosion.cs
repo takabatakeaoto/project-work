@@ -8,6 +8,7 @@ public class explosion : MonoBehaviour {
     public GameObject explode;//explodeにはunity上でprefabを関連付けます
     void Start()
     {
+       
         rb = this.GetComponent<Rigidbody>(); //衝突時にオブジェクトを消す際に使用
     }
     // Update is called once per frame
@@ -23,7 +24,9 @@ public class explosion : MonoBehaviour {
         {
             rb.isKinematic = true; //位置を固定
             this.transform.localScale = Vector3.zero; //みえない大きさにする
+           
             Instantiate(explode, this.transform.position, Quaternion.identity);
+           
             //ぶつかった位置にexplodeというprefabを配置する
 
 
@@ -34,13 +37,13 @@ public class explosion : MonoBehaviour {
         //タグで限定（他のオブジェクトに衝突した場合は呼び出さない
         {
             rb.isKinematic = true; //位置を固定
-            //this.transform.localScale = Vector3.zero; //みえない大きさにする
+            this.transform.localScale = Vector3.zero; //みえない大きさにする
             Destroy(this.gameObject,0.5f);
             Instantiate(explode, this.transform.position, Quaternion.identity);
             //ぶつかった位置にexplodeというprefabを配置する
 
         }
     }
+    
 
-
- }
+}

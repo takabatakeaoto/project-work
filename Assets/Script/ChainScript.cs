@@ -16,7 +16,7 @@ public class ChainScript : MonoBehaviour {
 
      void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Target")
+        if (collision.gameObject.tag == "Bullet")
         {
             //this.transform.localScale = Vector3.zero; //みえない大きさにする
 

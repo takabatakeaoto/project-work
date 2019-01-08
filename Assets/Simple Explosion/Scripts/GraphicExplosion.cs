@@ -32,12 +32,12 @@ GetComponent<Renderer>().material.SetVector("_ChannelFactor", new Vector4(r,g,b,
 GetComponent<Renderer>().material.SetVector("_Range", new Vector4(ramptime,0,0,0));
 GetComponent<Renderer>().material.SetFloat("_ClipRange", alphatime);
 
-
+       
 	}
 
+   
 
-    
-    
+
 
 
     IEnumerator TimeBomb()

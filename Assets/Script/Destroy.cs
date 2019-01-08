@@ -23,5 +23,10 @@ public class Destroy : MonoBehaviour
             
             Destroy(collision.gameObject);
         }
+
+        if (collision.gameObject.CompareTag("Target"))
+        {
+            Destroy(collision.gameObject);
+        }
     }
 }

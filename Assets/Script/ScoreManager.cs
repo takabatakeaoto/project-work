@@ -18,9 +18,7 @@ public class ScoreManager : MonoBehaviour
 
 
 
-    
-           
-    
+
 
     // スコアを増加させるメソッド
     // 外部からアクセスするためpublicで定義する
@@ -30,5 +28,5 @@ public class ScoreManager : MonoBehaviour
         score += amount;
         scoreLabel.text = "SCORE " + score;
     }
-    
+
 }

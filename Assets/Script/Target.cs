@@ -13,7 +13,7 @@ public class Target : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        StartCoroutine("TimeBomb");
+       StartCoroutine("TimeBomb");
         // 「ScoreManagerオブジェクト」に付いている「ScoreManagerスクリプト」の情報を取得して「sm」の箱に入れる。
         sm = GameObject.Find("ScoreManager").GetComponent<ScoreManager>();
     }
@@ -21,14 +21,14 @@ public class Target : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         transform.position += new Vector3(speed, 0f, 0f);
-        //this.gameObject.transform.Translate(Random.Range(Random1, Random2), 0,0);
+
         
     }
 
     void OnCollisionEnter(Collision collision) //衝突時の処理
     {
-        //Debug.Log(score);
-        //Destroy(this.gameObject);
+       
+
         if (collision.gameObject.tag == "Bullet")
         //タグで限定（他のオブジェクトに衝突した場合は呼び出さない
         {
@@ -36,37 +36,30 @@ public class Target : MonoBehaviour {
             sm.AddScore(score);
             Destroy(collision.gameObject);
         
-            if (gameObject.tag == "Animal")
-            {
-                GameObject.Find("red").GetComponent<ImageScript>().isFadeOut=true;
-            }
+            
         }
 
-       // if (collision.gameObject.CompareTag("Bullet")) 
-       // {
-            //Debug.Log("Bullet Tag");
-           
-       // }
 
         if (collision.gameObject.CompareTag("explosion"))
         {
             this.transform.localScale = Vector3.zero;
           
-            Destroy(collision.gameObject,0.5f);
+           Destroy(collision.gameObject,0.5f);
             sm.AddScore(score);
 
 
 
-            if (gameObject.tag == "Animal")
-            {
-                GameObject.Find("red").GetComponent<ImageScript>().isFadeOut = true;
-           }
+         
         }
 
+    if (gameObject.tag == "Animal")
+           {
+              GameObject.Find("red").GetComponent<ImageScript>().isFadeOut = true;
+           }
     }
     IEnumerator TimeBomb()
     {
-        yield return new WaitForSeconds(RemainingTime);
+        yield return new WaitForSeconds(5);
         Destroy(this.gameObject);
         yield return null;
 
