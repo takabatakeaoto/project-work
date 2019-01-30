@@ -71,16 +71,16 @@ public class SphereBooster : MonoBehaviour
     string distanceSuffix = " m";
 
     // HighScoreTextオブジェクトのTextコンポーネントへの参照をキャッシュ
-    Text highScoreText;
+    //Text highScoreText;
 
     // ハイスコア表示のプレフィックス
-    string highScorePrefix = "High Score : ";
+   // string highScorePrefix = "High Score : ";
 
     // ハイスコア表示のサフィックス
-    string highScoreSuffix = " m";
+  //  string highScoreSuffix = " m";
 
     // ハイスコアの距離
-    float highScoreDistance = 0f;
+   // float highScoreDistance = 0f;
 
     // 落下判定用オブジェクトのタグ
     string fallCheckerTag = "FallChecker";
@@ -121,12 +121,21 @@ public class SphereBooster : MonoBehaviour
     // GuideManagerへの参照のキャッシュ
     GuideManager guideManager;
 
+    public GameObject target;
+
     void Start()
     {
+
+        float x = Random.Range(3f, 23f);
+        float y = Random.Range(0.5f, 4f);
+        float z = Random.Range(-3f, -3f);
+        Instantiate(target, new Vector3(x, y, z), Quaternion.identity);
+
+
         initPosition = gameObject.transform.position;
         rb = gameObject.GetComponent<Rigidbody>();
         distanceText = distanceTextObject.GetComponent<Text>();
-        highScoreText = highScoreTextObject.GetComponent<Text>();
+      //  highScoreText = highScoreTextObject.GetComponent<Text>();
         powerMeterSlider = powerMeterObject.GetComponent<Slider>();
 
         arrowRt = angleArrowObject.GetComponent<RectTransform>();
@@ -135,8 +144,8 @@ public class SphereBooster : MonoBehaviour
         guideManager = guideManagerObject.GetComponent<GuideManager>();
 
         // DistanceTextとHighScoreTextの初期値をセット
-        SetDistanceText(0f);
-        SetHighScoreText(0f);
+      //  SetDistanceText(0f);
+      //  SetHighScoreText(0f);
     }
 
     void Update()
@@ -158,7 +167,7 @@ public class SphereBooster : MonoBehaviour
     void FixedUpdate()
     {
         // 距離の測定
-        CheckDistance();
+       // CheckDistance();
 
         if (!isBoostPressed)
         {
@@ -217,7 +226,7 @@ public class SphereBooster : MonoBehaviour
         rb.AddForce(force, ForceMode.Impulse);
 
         // 距離測定中フラグをTrueにセット
-        isCheckingDistance = true;
+       // isCheckingDistance = true;
 
         // 角度矢印を非表示にする
         angleArrowObject.SetActive(false);
@@ -248,37 +257,37 @@ public class SphereBooster : MonoBehaviour
         forceDirection = new Vector3(x, y, z);
     }
 
-    void CheckDistance()
-    {
-        if (!isCheckingDistance)
-        {
+   // void CheckDistance()
+    //{
+     //   if (!isCheckingDistance)
+      //  {
             // 距離測定中でなければ何もしない
-            return;
-        }
+     //       return;
+     //   }
 
         // 現在位置までの距離を計算する
-        Vector3 currentPosition = gameObject.transform.position;
-        float distance = GetDistanceInXZ(initPosition, currentPosition);
+     //   Vector3 currentPosition = gameObject.transform.position;
+      //  float distance = GetDistanceInXZ(initPosition, currentPosition);
 
         // UIテキストに表示
-        SetDistanceText(distance);
+      //  SetDistanceText(distance);
 
-        if (rb.IsSleeping())
-        {
+      //  if (rb.IsSleeping())
+      //  {
             // ハイスコアのチェック
-            stopPosition = currentPosition;
-            float currentDistance = GetDistanceInXZ(initPosition, stopPosition);
+        //    stopPosition = currentPosition;
+        //    float currentDistance = GetDistanceInXZ(initPosition, stopPosition);
 
-            if (currentDistance > highScoreDistance)
-            {
-                highScoreDistance = currentDistance;
-            }
-            SetHighScoreText(highScoreDistance);
+        //    if (currentDistance > highScoreDistance)
+        //    {
+         //       highScoreDistance = currentDistance;
+         //   }
+         //   SetHighScoreText(highScoreDistance);
 
             // 距離測定中フラグをオフに
-            isCheckingDistance = false;
-        }
-    }
+        //    isCheckingDistance = false;
+       // }
+   // }
 
     float GetDistanceInXZ(Vector3 startPos, Vector3 stopPos)
     {
@@ -297,11 +306,11 @@ public class SphereBooster : MonoBehaviour
         distanceText.text = distancePrefix + distance.ToString("F2") + distanceSuffix;
     }
 
-    void SetHighScoreText(float distance)
-    {
+   // void SetHighScoreText(float distance)
+   // {
         // 受け取ったハイスコアの値を使って画面に表示するテキストをセット
-        highScoreText.text = highScorePrefix + distance.ToString("F2") + highScoreSuffix;
-    }
+   //     highScoreText.text = highScorePrefix + distance.ToString("F2") + highScoreSuffix;
+   // }
 
     void OnTriggerEnter(Collider other)
     {

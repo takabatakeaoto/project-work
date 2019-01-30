@@ -47,6 +47,11 @@ public class FadeController : MonoBehaviour
         {
             StartFadeOut();
         }
+
+        if(Input.GetButtonDown("Fire2"))
+        {
+            SceneManager.LoadScene("levelupMain");
+        }
     }
 
     void StartFadeIn()

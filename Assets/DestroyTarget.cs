@@ -1,12 +1,16 @@
-﻿using System.Collections;
+﻿using UnityEngine;
+using UnityEngine.SceneManagement;
+using System;
+using System.Linq;
+using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 
 public class DestroyTarget : MonoBehaviour {
 
+   
 	// Use this for initialization
 	void Start () {
-		
+        
 	}
 	
 	// Update is called once per frame
@@ -18,8 +22,9 @@ public class DestroyTarget : MonoBehaviour {
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            this.transform.localScale = Vector3.zero;
-            Destroy(collision.gameObject);
+            // this.transform.localScale = Vector3.zero;
+            // Destroy(collision.gameObject);
+            SceneManager.LoadScene("gameclear");
         }
     }
 

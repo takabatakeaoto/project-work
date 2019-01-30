@@ -20,7 +20,7 @@ public class ComeBack : MonoBehaviour
         {
             ScoreManager.score = 0;
 
-            SceneManager.LoadScene("Main");
+            SceneManager.LoadScene("start");
         }
 
     }
